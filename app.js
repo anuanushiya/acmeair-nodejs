@@ -25,7 +25,7 @@ logger.setLevel(settings.loggerLevel);
 
 // disable process.env.PORT for now as it cause problem on mesos slave
 var port = (process.env.VMC_APP_PORT || process.env.VCAP_APP_PORT || settings.port);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var host = (process.env.VCAP_APP_HOST || '0.0.0.0');
 
 logger.info("host:port=="+host+":"+port);
 
